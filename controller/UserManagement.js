@@ -52,7 +52,7 @@ class UserController {
       });
   }
 
-  static changePassword(req, res, next) {
+  static readList(req, res, next) {
     const { id } = req.body;
     const error = {
       name: `otherError`,
@@ -60,7 +60,7 @@ class UserController {
       message: `Failed get data, please check again!`,
     };
 
-    User.findfindAll({order: [['createdAt', 'ASC']]})
+    User.findAll({order: [['createdAt', 'ASC']]})
       .then((result) => {
         if (result) {
           const data = result.filter((obj) => obj.id !== id)

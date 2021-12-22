@@ -1,0 +1,27 @@
+{
+  "name": "Game-With-Node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Obos-NMS/Game-With-Node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Obos-NMS/Game-With-Node/issues"
+  },
+  "homepage": "https://github.com/Obos-NMS/Game-With-Node#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.1",
+    "sequelize-cli": "^6.3.0"
+  }
+}

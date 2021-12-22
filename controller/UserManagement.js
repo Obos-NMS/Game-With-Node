@@ -26,10 +26,10 @@ class UserController {
   }
 
   static changePassword(req, res, next) {
-    const { id, password } = req.body;
+    const { username, password } = req.body;
     const encrypt = sha256(password)
     const payload = {
-      id,
+      username,
       password: encrypt
     }
     const error = {
@@ -38,10 +38,10 @@ class UserController {
       message: `Failed change password, please check again!`,
     };
 
-    User.update(payload, { where: { id } })
+    User.update(payload, { where: { username } })
       .then((result) => {
         if (result) {
-          res.status(200).json({ result });
+          res.status(200).json({ message: "Succes change password." });
         } else {
           throw error;
         }
@@ -52,11 +52,7 @@ class UserController {
       });
   }
 
-<<<<<<< HEAD
   static readList(req, res, next) {
-=======
-  static listUser(req, res, next) {
->>>>>>> 13598bbc1eea0440eb17c8b90f19ecbbd24abe89
     const { id } = req.body;
     const error = {
       name: `otherError`,

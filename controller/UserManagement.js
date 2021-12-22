@@ -52,7 +52,11 @@ class UserController {
       });
   }
 
+<<<<<<< HEAD
   static readList(req, res, next) {
+=======
+  static listUser(req, res, next) {
+>>>>>>> 13598bbc1eea0440eb17c8b90f19ecbbd24abe89
     const { id } = req.body;
     const error = {
       name: `otherError`,
